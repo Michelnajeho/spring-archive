@@ -1,4 +1,4 @@
-package com.example.springarchive.aop.timed;
+package com.spring.utils.archive.aop.timed;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

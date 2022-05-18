@@ -1,4 +1,4 @@
-package com.example.springarchive.aop.timed;
+package com.spring.utils.archive.aop.timed;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TimedAspect {
 
-    @Around("@annotation(Timed)")
+    @Around("@annotation(com.spring.utils.archive.aop.timed.Timed)")
     public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long start = System.currentTimeMillis();

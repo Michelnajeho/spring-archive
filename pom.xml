@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-archive</artifactId>
+    <artifactId>spring-utils-archive</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-archive</name>
+    <name>spring-utils-archive</name>
     <description>spring-archive</description>
     <properties>
         <java.version>17</java.version>
