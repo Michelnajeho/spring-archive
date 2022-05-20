@@ -17,6 +17,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class TimedAspect {
 
+    /**
+     * Apply @Timed(name = "{Method Name}") to the method you want to use.
+     * Outputs the run time in the form of the view below.
+     *
+     * Method name : {Method Name}
+     * Execution Time : 0.0 Second
+     */
     @Around("@annotation(com.spring.utils.archive.aop.timed.Timed)")
     public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
 
@@ -29,8 +36,8 @@ public class TimedAspect {
         MDC.clear();
 
         long end = System.currentTimeMillis();
-        log.info("Method name : {}", annotation.name());
-        log.info("Execution Time : {} Second", ( end - start ) / 1000.0);
+        log.debug("Method name : {}", annotation.name());
+        log.debug("Execution Time : {} Second", ( end - start ) / 1000.0);
 
         return proceed;
     }
